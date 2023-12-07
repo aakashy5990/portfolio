@@ -4,6 +4,7 @@
     justify-content: center;
     position: relative;
     width: 100%;
+    margin: 3rem 0;
 }
 .small_circle{
     width: 90px;
@@ -49,7 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90px;
+    /* height: 90px; */
 }
 .circle1{
     width: 130px;

@@ -167,6 +167,18 @@ function thanx() {
     setTimeout(function() {
       // Update the text content of the paragraph
       paragraph.textContent = "";
-    }, 3000); // 3000 milliseconds = 3 seconds
+    }, 3000);
   }
+}
+
+
+
+function toggleMenu() {
+  var menuList = document.getElementById('menu-list');
+
+  // Toggle the 'active' class on menu-list
+  menuList.classList.toggle('active');
+  // setTimeout(function() {
+  //   menuList.classList.toggle('active');
+  // }, 100);
 }

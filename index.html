@@ -7,6 +7,7 @@
     <title>Aakash Portfolio </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cv_button.css">
+    <link rel="stylesheet" href="css/media.css">
     <!--fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,13 +26,17 @@
 
         <!-- nav code here  -->
         <div class="nav-bar">
-            <div class="nav lf_padding">
+            <div class="nav_main">
+                <div class="nav lf_padding">
                 <ul class="nav_list">
                     <li><a href="index.html" class="nav_text"> //01. <span>&lt;Home/&gt;
                             </span> </a></li>
                     <li><a href="#project" class="nav_text">//03. <span>&lt;Project/&gt;
                             </span></a></li>
                 </ul>
+                <div class="menu_main" id="menu-toggle" onclick="toggleMenu()">
+                    <img src="img/menu_btn.png" alt="">
+                </div>
                 <div class="logo">
                     <p class="name_logo">&lt;h6&gt; <span> Portfolio </span> &lt;/h6&gt;</p>
                 </div>
@@ -39,6 +44,17 @@
                     <li><a href="#about" class="nav_text"> //02. <span>&lt; About /&gt;</span> </a></li>
                     <li><a href="#contact" class="nav_text"> //04. <span>&lt; Contact /&gt;</span> </a></li>
                 </ul>
+            </div>
+            <div class="menu_nav" id="menu-list">
+                <div class="menu_nav_main">
+                    <ul class="nav_list">
+                        <li><a href="index.html" class="nav_text"> //01. <span>&lt;Home/&gt;</span> </a></li>
+                        <li><a href="#project" class="nav_text">//03. <span>&lt;Project/&gt;</span></a></li>                
+                        <li><a href="#about" class="nav_text"> //02. <span>&lt; About /&gt;</span> </a></li>
+                        <li><a href="#contact" class="nav_text"> //04. <span>&lt; Contact /&gt;</span> </a></li>
+                    </ul>
+                </div>
+            </div>
             </div>
 
 
@@ -67,7 +83,7 @@
                             <!-- <div class="small_circle">
                                 <p class="flex"><a href="#">&lt;/ <span>CV</span> &gt;</a></p>
                             </div> -->
-                            <a class="small_circle flex" href="">&lt;/ <span>CV</span> &gt;</a>
+                            <a class="small_circle flex" href="https://drive.google.com/file/d/1O50zOjC5vTHDWLjR5z1M_e_QRDcyIynb/view?usp=drive_link">&lt;/ <span>CV</span> &gt;</a>
                         </div>
                     </div>
 
@@ -346,7 +362,7 @@
 
 
         <!-- contact us section  -->
-        <div class="contact_section lf_padding" id="contact">
+        <div class="contact_section" id="contact">
             <div class="contact_main lf_padding">
                 <div class="contact_container">
                     <p>&lt;h3&gt;</p>
@@ -369,9 +385,9 @@
         </div>
 
         <!-- footer  -->
-        <div class="footer_section ;lf_padding">
+        <div class="footer_section ">
             <div class="footer_main">
-                <div class="footer_container">
+                <div class="footer_container lf_padding">
                     <p>&lt;h3&gt;</p>
                     <p class="footer_header">Contact with me on Social Media</p>
                     <p>&lt;/h3&gt;</p>
@@ -395,7 +411,7 @@
                     </div>
                 </div>
                 <div class="footer_bottom">
-                    <p class="footer__bottom_pera">Created and Managed By Aakash Yadav | 2023 All Rigth Reserved.</p>
+                    <p class="footer__bottom_pera">Created and Managed By Aakash Yadav | 2023 All Right Reserved.</p>
                 </div>
             </div>
         </div>
