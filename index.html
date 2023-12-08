@@ -49,8 +49,9 @@
                 <div class="menu_nav_main">
                     <ul class="nav_list">
                         <li><a href="index.html" class="nav_text"> //01. <span>&lt;Home/&gt;</span> </a></li>
-                        <li><a href="#project" class="nav_text">//03. <span>&lt;Project/&gt;</span></a></li>                
                         <li><a href="#about" class="nav_text"> //02. <span>&lt; About /&gt;</span> </a></li>
+                        <li><a href="#project" class="nav_text">//03. <span>&lt;Project/&gt;</span></a></li>                
+                        <li><a href="#skills" class="nav_text">//03. <span>&lt;Skills/&gt;</span></a></li>                
                         <li><a href="#contact" class="nav_text"> //04. <span>&lt; Contact /&gt;</span> </a></li>
                     </ul>
                 </div>
@@ -98,7 +99,7 @@
         <!-- About section start  -->
 
         <div class="about_section" id="about">
-            <div class="about_main lf_padding">
+            <div class="about_main">
                 <div class="about_container">
                     <p>&lt;h3&gt;</p>
                     <p class="about_heading">About <span class="special-color">me</span></p>
@@ -199,10 +200,9 @@
                         </div>
                         <div class="project_pera_box_one common_pera_box hidden_element1">
                             <p class="project_pera_heading">Car Repering Website</p>
-                            <p class="project_peragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Assumenda corrupti a reiciendis!</p>
+                            <p class="project_peragraph">Empower your car with the care it deserves! Explore our website for expert car repairs that bring life back to your vehicle. Trust our skilled team for a smooth and reliable ride. Your journey begins here! </p>
                             <div class="deno_button">
-                                <a href="" class="demo_btn">Demo</a>
+                                <a href="https://aakashy5990.github.io/car_repairing/" target="_blank" class="demo_btn">Demo</a>
                             </div>
                         </div>
                     </div>
@@ -212,10 +212,9 @@
                         </div>
                         <div class="project_pera_box_two common_pera_box hidden_element2">
                             <p class="project_pera_heading">Brainwave Website</p>
-                            <p class="project_peragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Assumenda corrupti a reiciendis!</p>
+                            <p class="project_peragraph">Dive into the realm of brainwaves with our cutting-edge platform at brainwave clone website. Explore mindfulness, enhance cognition, and unleash your full mental potential. Elevate your experience with us!</p>
                             <div class="deno_button">
-                                <a href="" class="demo_btn">Demo</a>
+                                <a href="https://aakashy5990.github.io/brainwave-/" target="_blank" class="demo_btn">Demo</a>
                             </div>
                         </div>
                     </div>
@@ -225,24 +224,22 @@
                         </div>
                         <div class="project_pera_box_three common_pera_box hidden_element3">
                             <p class="project_pera_heading">Micro Website</p>
-                            <p class="project_peragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Assumenda corrupti a reiciendis!</p>
+                            <p class="project_peragraph">Immerse yourself in the symphony of sound on our music platform at microo website. Discover a world of beats, rhythms, and melodies that resonate with your soul. Tune in for a musical journey that transcends boundaries.</p>
                             <div class="deno_button">
-                                <a href="" class="demo_btn">Demo</a>
+                                <a href="https://aakashy5990.github.io/microo/" target="_blank" class="demo_btn">Demo</a>
                             </div>
 
                         </div>
                     </div>
                     <div class="project_box_four project_common_box hover_element4">
                         <div class="project-img">
-                            <img src="img/car_repair.jpg" alt="">
+                            <img src="img/old portfolio.jpeg" alt="">
                         </div>
                         <div class="project_pera_box_four common_pera_box hidden_element4">
-                            <p class="project_pera_heading">Digital Clock</p>
-                            <p class="project_peragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Assumenda corrupti a reiciendis!</p>
+                            <p class="project_pera_heading">Old Portfolio</p>
+                            <p class="project_peragraph">Explore my journey through creativity and accomplishments on my portfolio website. From design projects to personal reflections, each page tells a unique story. Welcome to a glimpse of my digital world!</p>
                             <div class="deno_button">
-                                <a href="" class="demo_btn">Demo</a>
+                                <a href=" https://aakashy5990.github.io/personal_website/" target="_blank" class="demo_btn">Demo</a>
                             </div>
                         </div>
                     </div>
@@ -259,7 +256,7 @@
         </div> -->
 
         <!-- skills html start -->
-        <div class="skills_container">
+        <div class="skills_container" id="skills">
             <div class="skills_main lf_padding">
                 <div class="skills_section">
                     <div class="skills_container">
@@ -373,10 +370,10 @@
                     <div class="form_main">
                         <p id="thanx" class="thanksmess"></p>
                         <form method="POST" action="index.html" name="google-sheet" id="clear_form">
-                            <input type="text" name="Name" id="textInput" placeholder="Your name..." required>
-                            <input type="email" id="textInput" name="Email" placeholder="Your Email..." required>
-                            <input type="number" name="Number" id="textInput" placeholder="Contact Number..." required>
-                            <textarea name="Message" id="textarea" cols="30" rows="8" placeholder="Write Message Here..." required></textarea>
+                            <input type="text" name="Name" id="input_name"placeholder="Your name..." required>
+                            <input type="email" id="input_email" name="Email" placeholder="Your Email..." required>
+                            <input type="number" name="Number" id="input_number" placeholder="Contact Number..." required>
+                            <textarea name="Message" id="input_text" cols="30" rows="8" placeholder="Write Message Here..." required></textarea>
                             <input type="submit" value="Submit" onclick="thanx()" id="button">
                         </form>
                     </div>

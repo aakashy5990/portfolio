@@ -19,7 +19,14 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
+
+*::selection {
+  background-color: #000;
+  color: var(--special-color);
+}
+
 body {
   background-color: var(--dark-bg-color);
 }
@@ -72,14 +79,11 @@ body {
 
 .nav-bar {
   width: 100%;
-  height: 100vh;
-  /* background-color: var(--dark-bg-color); */
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: aqua; */
 }
 
 .nav ul {
@@ -215,6 +219,9 @@ body {
 .about_section {
   width: 100%;
 }
+/* .about_second_child{
+  padding: 0 2rem;
+} */
 .about_main {
   display: flex;
   justify-content: center;
@@ -244,13 +251,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 3rem 3rem;
 }
 
 .about_second_child,
 .about_text_section {
-  max-width: 500px;
-  display: grid;
-  row-gap: 1.5rem;
+  display: flex;
+  row-gap: 1.3rem;
+  /* margin: 0 1rem; */
+  /* width: 100%; */
+  justify-content: center;
+  flex-direction: column;
 }
 .about_second_child a {
   text-decoration: none;
@@ -286,16 +297,19 @@ body {
   font-family: var(--normal-fonts);
   letter-spacing: 1px;
   word-spacing: 3px;
+  line-height: 22px;
+  width: 90%;
 }
 
 .about_first_child {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about_first_child img {
-  width: 100%;
-  height: 100%;
+  width: 350px;
 }
 
 /* middle line css setion  */
@@ -512,7 +526,7 @@ body {
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(230px, auto));
   grid: 20px;
-  gap: 20px;
+  gap: 2.5rem;
   align-content: center;
   justify-content: center;
 }
@@ -549,6 +563,7 @@ body {
 .project_pera_box_one p:nth-child(2) {
   color: var(--nav-text-color);
   font-family: var(--normal-fonts);
+  padding: 10px;
   font-size: 0.9rem;
   line-height: 19px;
   font-weight: 500;
@@ -947,7 +962,8 @@ form input:last-child:hover {
 }
 .footer_container {
   display: flex;
-  padding: 3rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   justify-content: center;
   flex-direction: column;
 }

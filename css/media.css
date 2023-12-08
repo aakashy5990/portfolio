@@ -51,6 +51,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin: 0 2rem;
     }
 
     /* what i do responsive section  */
@@ -165,10 +166,10 @@
         font-size: 2.8rem;
     }
     .this_is {
-        font-size: .7rem;
+        font-size: .6rem;
     }
     .front_end {
-        font-size: .7rem;
+        font-size: .6rem;
     }
     /* what i do responsive section  */
     .do_common_box {
@@ -235,9 +236,7 @@
         width: 8px;
         transform: translate(-83px, 6px);
     }
-    .lf_padding {
-        padding: 0 3rem;
-    }
+
     .from_section {
         padding-bottom: 2rem;
     }
@@ -277,5 +276,52 @@
     .menu_main img {
         width: 40px;
     }
+    .scroll_arrow {
+        font-size: 2rem;
+    }
+    .about_first_child {
+        width: 300px;
+        height: 300px;
+    }
+    .social_parents_main {
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+    .social_box {
+        width: 100px;
+        height: 100px;
+    }
+    .social_box:hover {
+        width: 120px;
+        height: 120px;
+    }
+    .social_box a p:nth-child(2) {
+        font-size: .8rem;
+    }
+    .social_box a p:nth-child(1) {
+        font-size: .8rem;
+    }
+    .social_box a p:nth-child(3) {
+        font-size: .8rem;
+    }
+}
 
+@media screen and (max-width:480px) {
+    .profile_name_pera p:nth-child(2) {
+        font-size: 2rem;
+    }
+    .lf_padding {
+        padding: 0 2rem;
+    }
+    .menu_nav_main ul li a {
+        font-size: 1rem;
+    }
+    .scroll_button a {
+        font: .9rem;
+    }
+    .about_container{
+        margin: 3rem 0;
+    }
+    .profile_section{
+        margin: 0;
+    }
 }

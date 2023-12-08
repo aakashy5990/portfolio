@@ -136,37 +136,57 @@ form.addEventListener('submit', e => {
 })
 
 
-
 // function thanx() {
+//   var inputField = document.getElementById("textInput");
+
 //   var paragraph = document.getElementById("thanx");
 
-//   paragraph.textContent = "Thanks for Contacting us..  ! We Will Contact You Soon...";
+//   if (inputField.value.trim() === "") {
+//     paragraph.textContent = "Please fill all details.";
+//   } else {
+//     paragraph.textContent = "Thanks for Contacting us..  ! We Will Contact You Soon...";
 
-//   setTimeout(function() {
-//     paragraph.textContent = "";
-//   }, 3000);
-
+//     setTimeout(function() {
+//       paragraph.textContent = "";
+//     }, 3000);
+//   }
 // }
 
-function thanx() {
-  // Get the input element by its ID
-  var inputField = document.getElementById("textInput");
 
-  // Get the paragraph element by its ID
+
+
+function thanx() {
+  var input_name = document.getElementById("input_name");
+  var input_email = document.getElementById("input_email");
+  var input_number = document.getElementById("input_number");
+  var input_text = document.getElementById("input_text");
+
+
+  var input = document.getElementById("input_name");
+  var input = document.getElementById("input_email");
+  var input = document.getElementById("input_number");
+  var input = document.getElementById("input_text");
+
   var paragraph = document.getElementById("thanx");
 
-  // Check if the input field is empty
-  if (inputField.value.trim() === "") {
-    // Display a message for an empty input
+  if (input_name.value === "" && input_email.value === "" && input_number.value === ""  && input_text.value === "") {
     paragraph.textContent = "Please fill all details.";
-  } else {
-    // Display a message for a non-empty input
-    paragraph.textContent = "Thanks for Contacting us..  ! We Will Contact You Soon...";
+    // paragraph.textContent = "Thanks for Contacting us..  ! We Will Contact You Soon...";
 
-    // Set a timeout to remove the text after 3 seconds
+  }
+  else if(input.value === ""){
+    paragraph.textContent = "Please fill all details.";
+  } 
+  else {
+    paragraph.textContent = "Thanks for Contacting us..  ! We Will Contact You Soon...";
+    // paragraph.textContent = "Please fill all details.";
+
+    // Clear the form after submission
+    
+    
     setTimeout(function() {
-      // Update the text content of the paragraph
       paragraph.textContent = "";
+      document.getElementById("clear_form").reset();
     }, 3000);
   }
 }
