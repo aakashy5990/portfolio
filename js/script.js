@@ -202,3 +202,8 @@ function toggleMenu() {
   //   menuList.classList.toggle('active');
   // }, 100);
 }
+
+
+const cv = () =>{
+  alert("Thank you for your interest in my CV. Currently, it is being improved for better quality.")
+}

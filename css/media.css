@@ -158,6 +158,14 @@
     .social_container p:nth-child(2) {
         padding: 2rem 0;
     }
+
+    .logos-slide img {
+        height: 100px;
+    }
+    .logos-slide img {
+        margin: 0 10px;
+    }
+
 }
 
 /* max-width 500 for android mobile */
@@ -323,5 +331,11 @@
     }
     .profile_section{
         margin: 0;
+    }
+    .logos-slide img {
+        height: 80px;
+    }
+    .logos-slide img {
+        margin: 0 10px;
     }
 }

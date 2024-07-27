@@ -762,6 +762,13 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+/* new code for new skills section  */
+.skills_container {
+  display: grid;
+  padding: 2rem 0;
+}
+
 .skills_container p:nth-child(2) {
   text-align: center;
   color: var(--text-color);
@@ -782,6 +789,49 @@ body {
   color: var(--special-color);
 }
 
+
+
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+  background: transparent;
+  white-space: nowrap;
+  margin: 5rem 0;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 30s slide infinite linear;
+}
+
+.logos-slide img {
+  /* width: 150px; */
+  height: 150px;
+  margin: 0 40px;
+}
+
+
+
+
+
+
+
+
+
+
 /* social section css start  */
 
 .social_main {
@@ -793,7 +843,7 @@ body {
 }
 .social_container {
   display: flex;
-  padding: 3rem 0;
+  padding: 0 0 3rem 0;
   justify-content: center;
   flex-direction: column;
 }
