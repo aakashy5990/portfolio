@@ -1,0 +1,341 @@
+@media screen and (min-width:720px) {
+    .menu_main,.menu_nav{
+        display: none;
+    }
+}
+
+/* for tablet size almost  */
+
+@media screen and (max-width:719px) {
+    .nav .nav_list{
+        display: none;
+    }
+    .nav{
+        margin: 3rem 0;
+    }
+    .menu_nav_main{
+        position: relative;
+    }
+    .menu_nav_main{
+        background-color: rgba(255, 255, 255, 0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+    .menu_nav_main ul{
+        list-style: none;
+    }
+    .menu_nav_main ul li a{
+        list-style: none;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        transition: all .5s ease-in-out;
+        /* transition: all 0.5s ease; */
+        color: var(--nav-text-color);
+        font-family: var(--normal-fonts);
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+    .menu_nav_main ul li{
+        line-height: 50px;
+    }
+    .menu_nav_main ul li a:hover {
+        border: 2px solid var(--special-color);
+    }
+    .about_perents_mainsection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 2rem;
+    }
+
+    /* what i do responsive section  */
+    .profile_name_pera p:nth-child(2) {
+        font-size: 3.5rem;
+    }
+    .do_common_box {
+        width: 400px;
+        height: 400px;
+    }
+    .do_box_one:hover {
+        width: 350px;
+        height: 350px;
+    }
+    .do_box_two:hover {
+        width: 350px;
+        height: 350px;
+    }
+    .do_box_three:hover {
+        width: 350px;
+        height: 350px;
+    }
+    .social_box2 {
+        transform: translateY(-30px);
+    }
+    .social_box2 {
+        transform: translateY(-30px);
+    }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+    .form_main {
+        width: 94%;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width:665px) {
+    .social_container {
+        padding-top: 2rem;
+    }
+    .scroll_arrow {
+        right: 2rem;
+    }
+    .social_container p:nth-child(2) {
+        padding: 2rem 0;
+    }
+
+}
+@media screen and (max-width:600px) {
+
+    /* <<<<<<<<<<< cv circular responsive >>>>>>>> */
+
+    .small_circle {
+        width: 80px;
+        height: 80px;
+    }
+    .circle1 {
+        width: 110px;
+        height: 110px;
+    }
+    .circle1::before {
+        height: 9px;
+        width: 9px;
+        transform: translate(-54px, 7px);
+    }
+    .circle2 {
+        width: 140px;
+        height: 140px;
+    }
+    .circle2::before {
+        height: 9px;
+        width: 9px;
+        transform: translate(-69px, 7px);
+    }
+    .circle3 {
+        width: 170px;
+        height: 170px
+    }
+    .circle3::before {
+        height: 9px;
+        width: 9px;
+        transform: translate(-84px, 9px);
+    }
+    .circle4 {
+        width: 200px;
+        height: 200px;
+    }    
+    .circle4::before {
+        height: 9px;
+        width: 9px;
+        transform: translate(-100px, 6px);
+    }
+
+    /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+    .profile_name_pera p:nth-child(2) {
+        font-size: 3.2rem;
+    }
+    .front_end {
+        font-size: .8rem;
+    }
+    .social_container p:nth-child(2) {
+        padding: 2rem 0;
+    }
+
+    .logos-slide img {
+        height: 100px;
+    }
+    .logos-slide img {
+        margin: 0 10px;
+    }
+
+}
+
+/* max-width 500 for android mobile */
+@media screen and (max-width:570px) {
+    .profile_name_pera p:nth-child(2) {
+        font-size: 2.8rem;
+    }
+    .this_is {
+        font-size: .6rem;
+    }
+    .front_end {
+        font-size: .6rem;
+    }
+    /* what i do responsive section  */
+    .do_common_box {
+        width: 300px;
+        height: 300px;
+    }
+    .do_box_one:hover {
+        width: 350px;
+        height: 350px;
+    }
+    .do_box_two:hover {
+        width: 350px;
+        height: 350px;
+    }
+    .do_box_three:hover {
+        width: 350px;
+        height: 350px;
+    }
+    .social_parents_main {
+        gap: 1rem;
+    }
+    .social_container p:nth-child(2) {
+        padding: 2rem 0;
+    }
+}
+@media screen and (max-width:501px) {
+    .small_circle {
+        width: 70px;
+        height: 70px;
+    }
+    .circle1 {
+        width: 90px;
+        height: 90px;
+    }
+    .circle1::before {
+        height: 8px;
+        width: 8px;
+        transform: translate(-43px, 7px);
+    }
+    .circle2 {
+        width: 110px;
+        height: 110px;
+    }
+    .circle2::before {
+        height: 8px;
+        width: 8px;
+        transform: translate(-53px, 7px);
+    }
+    .circle3 {
+        width: 140px;
+        height: 140px
+    }
+    .circle3::before {
+        height: 8px;
+        width: 8px;
+        transform: translate(-68px, 9px);
+    }
+    .circle4 {
+        width: 170px;
+        height: 170px;
+    }    
+    .circle4::before {
+        height: 8px;
+        width: 8px;
+        transform: translate(-83px, 6px);
+    }
+
+    .from_section {
+        padding-bottom: 2rem;
+    }
+    .scroll_arrow {
+        font-size: 2.3rem;
+    }
+    .social_parents_main {
+        gap: 1rem;
+    }
+
+    /* every header  */
+    .social_container p:nth-child(2) {
+        font-size: 2.2rem;
+        padding: 2rem 0;
+    }
+    .contact_container p:nth-child(2) {
+        font-size: 2.2rem;
+    }
+    .footer_container p:nth-child(2) {
+        font-size: 1.8rem;
+    }
+    .skills_container p:nth-child(2) {
+        font-size: 2.2rem;
+    }
+    .project_container p:nth-child(2) {
+        font-size: 2.2rem;
+    }
+    .do_container p:nth-child(2) {
+        font-size: 2.2rem;
+    }
+    .about_container p:nth-child(2) {
+        font-size: 2.2rem;
+    }
+    .nav .logo p span {
+        font-size: 1.5rem;
+    }
+    .menu_main img {
+        width: 40px;
+    }
+    .scroll_arrow {
+        font-size: 2rem;
+    }
+    .about_first_child {
+        width: 300px;
+        height: 300px;
+    }
+    .social_parents_main {
+        grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    }
+    .social_box {
+        width: 100px;
+        height: 100px;
+    }
+    .social_box:hover {
+        width: 120px;
+        height: 120px;
+    }
+    .social_box a p:nth-child(2) {
+        font-size: .8rem;
+    }
+    .social_box a p:nth-child(1) {
+        font-size: .8rem;
+    }
+    .social_box a p:nth-child(3) {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .profile_name_pera p:nth-child(2) {
+        font-size: 2rem;
+    }
+    .lf_padding {
+        padding: 0 2rem;
+    }
+    .menu_nav_main ul li a {
+        font-size: 1rem;
+    }
+    .scroll_button a {
+        font: .9rem;
+    }
+    .about_container{
+        margin: 3rem 0;
+    }
+    .profile_section{
+        margin: 0;
+    }
+    .logos-slide img {
+        height: 80px;
+    }
+    .logos-slide img {
+        margin: 0 10px;
+    }
+}
