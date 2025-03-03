@@ -204,6 +204,6 @@ function toggleMenu() {
 }
 
 
-const cv = () =>{
-  alert("Thank you for your interest in my CV. Currently, it is being improved for better quality.")
-}
+// const cv = () =>{
+//   alert("Thank you for your interest in my CV. Currently, it is being improved for better quality.")
+// }
