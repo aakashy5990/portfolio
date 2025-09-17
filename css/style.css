@@ -544,6 +544,9 @@ body {
   width: 100%;
   height: 100%;
   vertical-align: bottom;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .project_pera_box_one {
