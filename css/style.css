@@ -1002,6 +1002,84 @@ form input:last-child:hover {
   background-color: var(--nav-text-color);
   color: #000;
 }
+
+/* Submit button styles */
+button[type="submit"] {
+  background: linear-gradient(135deg, var(--special-color), #1e7e1e);
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--normal-fonts);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  min-width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #1e7e1e, var(--special-color));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(32, 194, 14, 0.3);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(32, 194, 14, 0.2);
+}
+
+/* Loading state */
+button[type="submit"].loading {
+  background: linear-gradient(135deg, #666, #888);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+button[type="submit"].loading:hover {
+  background: linear-gradient(135deg, #666, #888);
+  transform: none;
+  box-shadow: none;
+}
+
+/* Success state */
+button[type="submit"].success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  animation: successPulse 0.6s ease-in-out;
+}
+
+@keyframes successPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Loading spinner */
+button[type="submit"].loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 .form_main {
   width: 80%;
   margin: 0 auto;
@@ -1117,6 +1195,7 @@ form input:last-child:hover {
    /* Hide the number input arrows in Firefox */
    input[type="number"] {
      -moz-appearance: textfield;
+     appearance: textfield;
    }
 
    .thanksmess{

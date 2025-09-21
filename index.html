@@ -495,16 +495,16 @@
           </div>
           <div class="from_section">
             <div class="form_main">
-              <p id="thanx" class="thanksmess"></p>
+              <div id="form-message" style="display: none; margin-bottom: 20px; padding: 10px; border-radius: 5px;"></div>
               <form
                 method="POST"
-                action="index.html"
-                name="google-sheet"
-                id="clear_form"
+                action="https://api.web3forms.com/submit"
+                id="contact-form"
               >
+                <input type="hidden" name="access_key" value="902ed2f1-ab7f-463a-8d07-9254e92114af">
                 <input
                   type="text"
-                  name="Name"
+                  name="name"
                   id="input_name"
                   placeholder="Your name..."
                   required
@@ -512,31 +512,33 @@
                 <input
                   type="email"
                   id="input_email"
-                  name="Email"
+                  name="email"
                   placeholder="Your Email..."
                   required
                 />
                 <input
                   type="number"
-                  name="Number"
+                  name="number"
                   id="input_number"
                   placeholder="Contact Number..."
                   required
                 />
                 <textarea
-                  name="Message"
+                  name="message"
                   id="input_text"
                   cols="30"
                   rows="8"
                   placeholder="Write Message Here..."
                   required
                 ></textarea>
-                <input
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <!-- <input
                   type="submit"
                   value="Submit"
                   onclick="thanx()"
                   id="button"
-                />
+                /> -->
+                <button type="submit">Submit Form</button>
               </form>
             </div>
           </div>

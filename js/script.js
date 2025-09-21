@@ -123,76 +123,6 @@ scrollarrow.addEventListener('click', () => {
 
 
 
-
-// data to store database on google sheet js code 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwkp-DovNkt-Z4spG4oteiUgbXpzsqT0mZuZL-8p1p4pwGFB-BaHwQmP9Sr_nsEERUSNQ/exec'
-const form = document.forms['google-sheet']
-  
-form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    // .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
-    .catch(error => console.error('Error!', error.message))
-})
-
-
-// function thanx() {
-//   var inputField = document.getElementById("textInput");
-
-//   var paragraph = document.getElementById("thanx");
-
-//   if (inputField.value.trim() === "") {
-//     paragraph.textContent = "Please fill all details.";
-//   } else {
-//     paragraph.textContent = "Thanks for Contacting us..  ! We Will Contact You Soon...";
-
-//     setTimeout(function() {
-//       paragraph.textContent = "";
-//     }, 3000);
-//   }
-// }
-
-
-
-
-function thanx() {
-  var input_name = document.getElementById("input_name");
-  var input_email = document.getElementById("input_email");
-  var input_number = document.getElementById("input_number");
-  var input_text = document.getElementById("input_text");
-
-
-  var input = document.getElementById("input_name");
-  var input = document.getElementById("input_email");
-  var input = document.getElementById("input_number");
-  var input = document.getElementById("input_text");
-
-  var paragraph = document.getElementById("thanx");
-
-  if (input_name.value === "" && input_email.value === "" && input_number.value === ""  && input_text.value === "") {
-    paragraph.textContent = "Please fill all details.";
-    // paragraph.textContent = "Thanks for Contacting us..  ! We Will Contact You Soon...";
-
-  }
-  else if(input.value === ""){
-    paragraph.textContent = "Please fill all details.";
-  } 
-  else {
-    paragraph.textContent = "Thanks for Contacting us..  ! We Will Contact You Soon...";
-    // paragraph.textContent = "Please fill all details.";
-
-    // Clear the form after submission
-    
-    
-    setTimeout(function() {
-      paragraph.textContent = "";
-      document.getElementById("clear_form").reset();
-    }, 3000);
-  }
-}
-
-
-
 function toggleMenu() {
   var menuList = document.getElementById('menu-list');
 
@@ -213,3 +143,101 @@ function toggleMenu() {
 const yr = document.getElementById('year');
 const year = new Date().getFullYear();
 yr.innerHTML = year;
+
+// Form handling
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form');
+    const messageDiv = document.getElementById('form-message');
+    const submitButton = document.querySelector('button[type="submit"]');
+    
+    if (form && submitButton) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Set button to loading state
+            setButtonState('loading', 'Submitting...');
+            
+            // Show loading message
+            showMessage('Sending message...', 'info');
+            
+            // Get form data
+            const formData = new FormData(form);
+            
+            // Submit to Web3Forms
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Set button to success state
+                    setButtonState('success', 'Submitted!');
+                    showMessage('Thank you! Your message has been sent successfully.', 'success');
+                    form.reset(); // Clear the form
+                    
+                    // Reset button to normal state after 3 seconds
+                    setTimeout(() => {
+                        setButtonState('normal', 'Submit Form');
+                    }, 3000);
+                } else {
+                    setButtonState('normal', 'Submit Form');
+                    showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                setButtonState('normal', 'Submit Form');
+                showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+            });
+        });
+    }
+    
+    function setButtonState(state, text) {
+        // Remove all state classes
+        submitButton.classList.remove('loading', 'success');
+        
+        // Add the appropriate state class
+        if (state !== 'normal') {
+            submitButton.classList.add(state);
+        }
+        
+        // Update button text
+        submitButton.textContent = text;
+        
+        // Disable/enable button based on state
+        if (state === 'loading') {
+            submitButton.disabled = true;
+        } else {
+            submitButton.disabled = false;
+        }
+    }
+    
+    function showMessage(text, type) {
+        messageDiv.textContent = text;
+        messageDiv.style.display = 'block';
+        
+        // Remove existing classes
+        messageDiv.className = '';
+        
+        // Add appropriate styling based on type
+        if (type === 'success') {
+            messageDiv.style.backgroundColor = '#d4edda';
+            messageDiv.style.color = '#155724';
+            messageDiv.style.border = '1px solid #c3e6cb';
+        } else if (type === 'error') {
+            messageDiv.style.backgroundColor = '#f8d7da';
+            messageDiv.style.color = '#721c24';
+            messageDiv.style.border = '1px solid #f5c6cb';
+        } else if (type === 'info') {
+            messageDiv.style.backgroundColor = '#d1ecf1';
+            messageDiv.style.color = '#0c5460';
+            messageDiv.style.border = '1px solid #bee5eb';
+        }
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+        }, 5000);
+    }
+});
