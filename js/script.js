@@ -207,3 +207,9 @@ function toggleMenu() {
 // const cv = () =>{
 //   alert("Thank you for your interest in my CV. Currently, it is being improved for better quality.")
 // }
+
+
+// get year 
+const yr = document.getElementById('year');
+const year = new Date().getFullYear();
+yr.innerHTML = year;
